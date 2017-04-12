@@ -5,13 +5,11 @@
 /// <reference path="angular/Angular.ts"/>
 /// <reference path="Controllers.ts"/>
 
-declare var storage: LocalStorage;
-
 class TodoStorage {
     private STORAGE_ID: string = "TODOS-angularjs";
 
     get(): Array<Todo> {
-        let data = storage.getItem(this.STORAGE_ID);
+        let data = localStorage.getItem(this.STORAGE_ID);
         if(data == null) {
             data = "[]"
         }
@@ -19,6 +17,6 @@ class TodoStorage {
     }
 
     put(data: Array<Todo>) {
-        storage.setItem(this.STORAGE_ID, JSON.stringify(data))
+        localStorage.setItem(this.STORAGE_ID, JSON.stringify(data))
     }
 }
