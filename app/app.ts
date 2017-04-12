@@ -11,11 +11,11 @@ function filter(data: Array<Todo>, completed: Boolean): Array<Todo> {
 }
 
 export class App {
-    init() {
+    static init() {
         var todomvc = angular.module("todomvc", ["ngRoute"])
 
-        todomvc.filter("filter", filter)
-        todomvc.factory("todoStorage", [() => { new TodoStorage() }])
+        todomvc.filter("filter", () => { return filter })
+        todomvc.factory("todoStorage", [() => { return new TodoStorage() }])
         todomvc.directive("todoFocus", ["$timeout", ])
         todomvc.controller("TodoCtrl", ["$scope", "$location", "todoStorage", "filterFilter", TodoCtrl.prototype.constructor])
 
@@ -24,3 +24,5 @@ export class App {
         }])
     }
 }
+
+App.init();
