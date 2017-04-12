@@ -5,9 +5,9 @@
 declare var angular: any;
 
 interface Scope {
-    watch(exp: any, todo: (any), deepWatch: Boolean)
-    watch(exp: any, todo: (any))
-    apply(func: (any))
+    $watch(exp: any, todo: (any), deepWatch: Boolean)
+    $watch(exp: any, todo: (any))
+    $apply(func: (any))
 }
 
 interface LocalStorage {
