@@ -40,7 +40,7 @@ class TodoCtrl {
         this.editedTodo = null;
         this.test = "jello";
 
-        scope.watch("todos", () => {
+        scope.$watch("todos", () => {
             this.remainingCount = filterFilter(this.todos, false).length;
             this.completedCount = this.todos.length - this.remainingCount;
             this.completedCount = this.todos.length - this.remainingCount;
@@ -53,7 +53,7 @@ class TodoCtrl {
 
         this.location = location;
 
-        scope.watch("location.pathname", path => {
+        scope.$watch("location.pathname", path => {
             switch (path) {
                 case "/active":
                     this.statusFilter = false;
