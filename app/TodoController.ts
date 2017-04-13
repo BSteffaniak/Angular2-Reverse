@@ -2,9 +2,11 @@
  * Created by bradensteffaniak on 4/11/17.
  */
 
-/// <reference path="angular/Angular.ts"/>
+import { Scope } from "./angular/Angular1";
 
-class Todo {
+import { TodoStorage } from "./Services";
+
+export class Todo {
     title: string = "";
     completed: boolean = false;
 
@@ -14,7 +16,7 @@ class Todo {
     }
 }
 
-class TodoCtrl {
+export class TodoCtrl {
     location: Location;
     todoStorage: TodoStorage;
     filterFilter: (a: Array<Todo>, b: boolean) => Array<Todo>;

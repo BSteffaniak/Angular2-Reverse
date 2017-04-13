@@ -1,17 +1,26 @@
 <html>
 <head>
-  <script>
-    var exports = {};
-  </script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
-  <script type="text/javascript" src="angular/Angular.js"></script>
-  <script type="text/javascript" src="Services.js"></script>
-  <script type="text/javascript" src="Controllers.js"></script>
-  <script type="text/javascript" src="app.js"></script>
-</head>
-<body ng-app="todomvc">
-<a href="#test">Test</a><br>
-<div ng-view></div>
-</body>
+    <script>
+        var exports = {};
+
+        function require(moduleName) {
+            return exports;
+        }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="angular/Angular1.js"></script>
+    <script type="text/javascript" src="Services.js"></script>
+    <script type="text/javascript" src="TodoController.js"></script>
+    <script type="text/javascript" src="FocusDirective.js"></script>
+    <script type="text/javascript" src="HighlightDirective.js"></script>
+    <script>
+        App.init();
+    </script>
+    </head>
+    <body ng-app="todomvc">
+        <a href="#test">Test</a><br>
+        <div ng-view></div>
+    </body>
 </html>

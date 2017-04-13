@@ -2,10 +2,9 @@
  * Created by bradensteffaniak on 4/11/17.
  */
 
-/// <reference path="angular/Angular.ts"/>
-/// <reference path="Controllers.ts"/>
+import { Todo } from "./TodoController";
 
-class TodoStorage {
+export class TodoStorage {
     private STORAGE_ID: string = "TODOS-angularjs";
 
     get(): Array<Todo> {

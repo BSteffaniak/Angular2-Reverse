@@ -6,5 +6,7 @@ hey {{ctrl.test}}!
 	{{todo.title}}
 </p>
 
-<input type="text" ng-model="ctrl.newTodo" ng-keyup="$event.keyCode == 13 && ctrl.addTodo()" />
+<p highlight highlight-color="red">hello highlighted</p>
+
+<input focus type="text" ng-model="ctrl.newTodo" ng-keyup="$event.keyCode == 13 && ctrl.addTodo()" />
 <input type="button" ng-click="ctrl.addTodo()" value="Add todo" />
